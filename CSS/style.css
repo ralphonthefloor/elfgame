@@ -1,0 +1,97 @@
+/*
+COLOR PALETTE
+https://colorhunt.co/palette/f4f4f2e8e8e8bbbfca495464
+*/
+
+
+/* TAG SELECTORS */
+body {
+  background-color: #F4F4F2;
+  color: #495464;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Twinkle Star', cursive;
+  font-size: 10rem;
+}
+
+a {
+  color: #495464;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F4F4F2;
+}
+
+
+/* HEADER */
+.header {
+  padding: 2% 10%;
+}
+
+
+/* MAIN CONTAINER */
+.carousel {
+width:100%;
+height:500px;
+padding: 5%;
+}
+
+.carousel-inner {
+  margin-top: 15%;
+}
+
+.carousel-item {
+  font-size: 3rem;
+  padding: 5%;
+}
+
+.yes-no-btn {
+  padding: 1% 4%;
+  margin: 2% 5%;
+  font-size: 3rem;
+}
+
+/* QUIZ CONTAINER */
+#quiz-container {
+  padding: 15% 0;
+}
+
+.list-group-item {
+  font-size: 1.25rem;
+  padding-bottom: 5% 5%;
+}
+
+.list-group-header {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+#stats1 {
+  padding-right: 25px;
+}
+
+#stats2 {
+  padding-left: 25px;
+}
+
+.quiz-result {
+  font-size: 3rem;
+  padding: 10% 5%;
+}
+
+/* FOOTER */
+.footer-icon-sm {
+  font-size: 7rem;
+  padding: 2% 4%;
+  color: darkgreen;
+}
+
+.footer-icon-lg {
+  font-size: 10rem;
+  padding: 2% 4%;
+  color: darkgreen;
+}
