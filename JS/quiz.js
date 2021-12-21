@@ -39,7 +39,7 @@ function checkAnswer(answerSelection) {
   }
 
   //check if last question
-  if (questionNumber == 4) {
+  if (questionNumber == totalQuestions - 1) {
     if (score/totalQuestions*100 > 79) {
     //show success, link to hint
     document.getElementById('quiz-container').innerHTML = "";
@@ -53,7 +53,7 @@ function checkAnswer(answerSelection) {
     document.getElementById('quiz-container').innerHTML = "";
     document.getElementById('quiz-container').insertAdjacentHTML('afterbegin', '<p id="quiz-score"></p><p id="result-icon"></p><p id="quiz-message"></p>');
     document.getElementById('quiz-score').innerHTML = 'Your score:<br>' + score/totalQuestions*100 + "%";
-    document.getElementById('quiz-message').innerHTML = 'You suck! <br> <button type="button" class="btn btn-lg btn-outline-dark yes-no-btn" name="button" onclick="window.location.reload()">Retry</button>';
+    document.getElementById('quiz-message').innerHTML = 'You cotton-headed ninny muggin! I knew you didn&#39;t appreciate us! <br> <button type="button" class="btn btn-lg btn-outline-dark yes-no-btn" name="button" onclick="window.location.reload()">Retry</button>';
     document.getElementById('result-icon').innerHTML = '<i class="far fa-times-circle"></i>';
     console.log("boo");
   }
@@ -105,5 +105,7 @@ function submitAnswer() {
 
 function hint() {
   document.getElementById('quiz-container').innerHTML = "";
-  document.getElementById('quiz-container').insertAdjacentHTML('afterbegin', '<p class="quiz-result">If Santa were to go on vacation, he would use his magic bag, but you humans would use a ________.</p>');
+  document.getElementById('quiz-container').insertAdjacentHTML('afterbegin', '<p id="result-icon"></p><p id="quiz-message"></p>');
+  document.getElementById('quiz-message').innerHTML = "If Santa were to go on vacation, he would use his magic bag, but humans would use a ________.";
+  document.getElementById('result-icon').innerHTML = "<i class='fas fa-question-circle'></i>";
 }
