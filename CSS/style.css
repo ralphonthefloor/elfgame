@@ -85,6 +85,30 @@ margin-bottom: 200px;
   font-weight: bolder;
 }
 
+/* HIDE RADIO */
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + i {
+  cursor: pointer;
+  color: lightgrey;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + i {
+  color: #ABD1F3;
+}
+
+/* HOVER STYLES */
+[type=radio]:hover + i {
+  color: #B9F2FF;
+}
+
 #stats1 {
   padding-right: 25px;
 }
