@@ -30,8 +30,22 @@ a:hover {
 /* HEADER */
 .header {
   padding: 2% 10%;
+  width: 100%;
 }
 
+.title-img-1 {
+  position: absolute;
+  left: 20%;
+  top: 3%;
+  height: 200px;
+}
+
+.title-img-2 {
+  position: absolute;
+  right: 20%;
+  top: 10%;
+  height: 200px;
+}
 
 /* MAIN CONTAINER */
 .carousel {
@@ -83,9 +97,18 @@ margin-bottom: 200px;
   font-size: 4rem;
 }
 
-.quiz-result {
+#quiz-score {
+  font-size: 5rem;
+  padding: 10% 5%;
+}
+
+#quiz-message {
   font-size: 3rem;
   padding: 10% 5%;
+}
+
+#result-icon {
+  font-size: 15rem;
 }
 
 /* FOOTER */

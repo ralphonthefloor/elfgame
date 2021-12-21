@@ -41,16 +41,22 @@ function checkAnswer(answerSelection) {
   //check if last question
   if (questionNumber == 4) {
     if (score/totalQuestions*100 > 79) {
+    //show success, link to hint
     document.getElementById('quiz-container').innerHTML = "";
-    document.getElementById('quiz-container').insertAdjacentHTML('afterbegin', '<p class="quiz-result">Congratulations! Here&#39;s a hint as to where you can find your gift!</p><button type="button" class="btn btn-lg btn-outline-dark yes-no-btn" name="button" onclick="hint()">Hint</button>');
+    document.getElementById('quiz-container').insertAdjacentHTML('afterbegin', '<p id="quiz-score"></p><p id="result-icon"></p><p id="quiz-message"></p>');
+    document.getElementById('quiz-score').innerHTML = 'Your score:<br>' + score/totalQuestions*100 + "%";
+    document.getElementById('quiz-message').innerHTML = 'Congratulations! Here&#39;s a hint as to where you can find your gift!</p><button type="button" class="btn btn-lg btn-outline-dark yes-no-btn" name="button" onclick="hint()">Hint</button>';
+    document.getElementById('result-icon').innerHTML = '<i class="fas fa-gift"></i>';
     console.log("congrats");
   } else {
+    //show failure, allow retry
     document.getElementById('quiz-container').innerHTML = "";
-    document.getElementById('quiz-container').insertAdjacentHTML('afterbegin', '<p class="quiz-result">You suck!</p>');
+    document.getElementById('quiz-container').insertAdjacentHTML('afterbegin', '<p id="quiz-score"></p><p id="result-icon"></p><p id="quiz-message"></p>');
+    document.getElementById('quiz-score').innerHTML = 'Your score:<br>' + score/totalQuestions*100 + "%";
+    document.getElementById('quiz-message').innerHTML = 'You suck! <br> <button type="button" class="btn btn-lg btn-outline-dark yes-no-btn" name="button" onclick="window.location.reload()">Retry</button>';
+    document.getElementById('result-icon').innerHTML = '<i class="far fa-times-circle"></i>';
     console.log("boo");
   }
-    // return 0;
-    //do something to show score - change innerHTML of the quiz to stats only?
   }
 
   //check complete, update question counter and log status
@@ -71,7 +77,7 @@ function checkAnswer(answerSelection) {
   document.getElementById('ans-btn-4').checked = false;
 
   //update stats
-  document.getElementById('stats1').innerHTML = "Question: " + (questionNumber+1) + "/10";
+  document.getElementById('stats1').innerHTML = "Question: " + (questionNumber+1) + "/" + totalQuestions;
   document.getElementById('stats2').innerHTML = "Score: " + score + "/" + questionNumber;
 }
 
