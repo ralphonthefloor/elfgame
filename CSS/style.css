@@ -67,7 +67,7 @@ margin-bottom: 200px;
 }
 
 .list-group-header {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: bolder;
 }
 
@@ -77,6 +77,10 @@ margin-bottom: 200px;
 
 #stats2 {
   padding-left: 25px;
+}
+
+.quiz-submit-btn {
+  font-size: 4rem;
 }
 
 .quiz-result {
