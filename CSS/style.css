@@ -35,7 +35,7 @@ a:hover {
 
 .title-img-1 {
   position: absolute;
-  left: 20%;
+  left: 5%;
   top: 3%;
   height: 200px;
 }
@@ -43,7 +43,7 @@ a:hover {
 .title-img-2 {
   position: absolute;
   right: 20%;
-  top: 10%;
+  top: 12%;
   height: 200px;
 }
 
